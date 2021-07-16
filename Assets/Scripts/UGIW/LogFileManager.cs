@@ -35,18 +35,13 @@ public class LogFileManager : MonoBehaviour
 
     private void Update()
     {
-        if (true)
-        {
-            TriggerPressed();
-            WriteFile();
-        }
+
     }
 
     public static void WriteFile()
     {
-        //DataPath += "/UGIW_Logfile_" + _fileId +".ugiw";
-        //File.WriteAllText(DataPath, _concatenatedLogString);
-        Debug.Log(_concatenatedLogString);
+        DataPath += "/UGIW_Logfile_" + _fileId +".ugiw";
+        File.WriteAllText(DataPath, _concatenatedLogString);
     }
 
     public static void TriggerPressed()
