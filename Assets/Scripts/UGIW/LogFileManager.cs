@@ -35,7 +35,7 @@ public class LogFileManager : MonoBehaviour
 
     private void Update()
     {
-        if (_rightTriggerValue)
+        if (true)
         {
             TriggerPressed();
             WriteFile();
@@ -44,14 +44,16 @@ public class LogFileManager : MonoBehaviour
 
     public static void WriteFile()
     {
-        DataPath += "/UGIW_Logfile_" + _fileId +".ugiw";
-        File.WriteAllText(DataPath, _concatenatedLogString);
+        //DataPath += "/UGIW_Logfile_" + _fileId +".ugiw";
+        //File.WriteAllText(DataPath, _concatenatedLogString);
+        Debug.Log(_concatenatedLogString);
     }
 
     public static void TriggerPressed()
     {
         DateTimeOffset dto;
         dto = DateTimeOffset.Now;
-        _concatenatedLogString += "| UGIW | Trigger-Pressed | " + dto.LocalDateTime + " |" + "\n";
+        _concatenatedLogString += "| UGIW | Trigger-Pressed | " 
+            + dto.LocalDateTime.ToString("dd/MM/yyyy hh:mm:ss.fff tt") + " |" + "\n";
     }
 }
