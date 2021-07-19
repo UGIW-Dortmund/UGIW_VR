@@ -2,7 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.XR;
 
 [Serializable]
@@ -14,7 +16,7 @@ public class LogFileManager : MonoBehaviour
     private static string _concatenatedLogString;
     private static DateTimeOffset _dto;
 
-    public string LogString;
+    public Text LogText;
 
     private void Start()
     {
@@ -25,7 +27,7 @@ public class LogFileManager : MonoBehaviour
 
     private void Update()
     {
-        LogString = _concatenatedLogString;
+        LogText.text = _concatenatedLogString;
     }
 
     public void WriteFile()
@@ -46,5 +48,24 @@ public class LogFileManager : MonoBehaviour
         _dto = DateTimeOffset.Now;
         _concatenatedLogString += "| UGIW | General_msg | " + message + " |"
             + _dto.LocalDateTime.ToString("dd/MM/yyyy hh:mm:ss.fff tt") + " |" + "\n";
+    }
+    public void PickedUp(GameObject controller)
+    {
+        _dto = DateTimeOffset.Now;
+        _concatenatedLogString += "| UGIW | Object picked up with " + controller.name + " | "  
+            + _dto.LocalDateTime.ToString("dd/MM/yyyy hh:mm:ss.fff tt") + " |" + "\n";
+    }
+
+    public void Released(GameObject controller)
+    {
+        _dto = DateTimeOffset.Now;
+        _concatenatedLogString += "| UGIW | Object dropped with " + controller.name + " | "
+            + _dto.LocalDateTime.ToString("dd/MM/yyyy hh:mm:ss.fff tt") + " |" + "\n";
+    }
+
+    public void EndApp()
+    {
+        GeneralPurposeLogMessage("Saved on device!");
+        WriteFile();
     }
 }
