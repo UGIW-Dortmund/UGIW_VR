@@ -8,47 +8,43 @@ using UnityEngine.XR;
 [Serializable]
 public class LogFileManager : MonoBehaviour
 {
-    private InputDevice _rightController;
-    private bool _rightTriggerValue;
-
     public static string DataPath;
-    private static System.Random _rand = new System.Random();
-    private static int _fileId = _rand.Next(1, 999999);
+    private static System.Random _rand;
+    private static int _fileId;
     private static string _concatenatedLogString;
+    private static DateTimeOffset _dto;
+
+    public string LogString;
 
     private void Start()
     {
-        List<InputDevice> devices = new List<InputDevice>();
-        InputDeviceCharacteristics controllerCharacteristics = InputDeviceCharacteristics.Controller;
-        InputDevices.GetDevicesWithCharacteristics(controllerCharacteristics, devices);
-        foreach (InputDevice item in devices)
-        {
-            if (item.characteristics == InputDeviceCharacteristics.Right)
-            {
-                _rightController = item;
-            }
-        }
-        _rightController.TryGetFeatureValue(CommonUsages.triggerButton, out _rightTriggerValue);
-
+        _rand = new System.Random();
+        _fileId = _rand.Next(1, 999999);
         DataPath = Application.persistentDataPath;
     }
 
     private void Update()
     {
-
+        LogString = _concatenatedLogString;
     }
 
-    public static void WriteFile()
+    public void WriteFile()
     {
         DataPath += "/UGIW_Logfile_" + _fileId +".ugiw";
         File.WriteAllText(DataPath, _concatenatedLogString);
     }
 
-    public static void TriggerPressed()
+    public void TriggerPressed()
     {
-        DateTimeOffset dto;
-        dto = DateTimeOffset.Now;
+        _dto = DateTimeOffset.Now;
         _concatenatedLogString += "| UGIW | Trigger-Pressed | " 
-            + dto.LocalDateTime.ToString("dd/MM/yyyy hh:mm:ss.fff tt") + " |" + "\n";
+            + _dto.LocalDateTime.ToString("dd/MM/yyyy hh:mm:ss.fff tt") + " |" + "\n";
+    }
+
+    public void GeneralPurposeLogMessage(string message)
+    {
+        _dto = DateTimeOffset.Now;
+        _concatenatedLogString += "| UGIW | General_msg | " + message + " |"
+            + _dto.LocalDateTime.ToString("dd/MM/yyyy hh:mm:ss.fff tt") + " |" + "\n";
     }
 }
