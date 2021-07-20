@@ -1,1 +1,1 @@
-# UGIW-Project-APP
+# UGIW-Project VR Application
