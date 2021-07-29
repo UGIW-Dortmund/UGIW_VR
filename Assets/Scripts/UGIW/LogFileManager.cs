@@ -16,7 +16,7 @@ public class LogFileManager : MonoBehaviour
     private static string _concatenatedLogString;
     private static DateTimeOffset _dto;
 
-    public Text LogText;
+    //public Text LogText;
 
     private void Start()
     {
@@ -25,10 +25,10 @@ public class LogFileManager : MonoBehaviour
         DataPath = Application.persistentDataPath;
     }
 
-    private void Update()
-    {
-        LogText.text = _concatenatedLogString;
-    }
+    //private void Update()
+    //{
+    //    LogText.text = _concatenatedLogString;
+    //}
 
     public void WriteFile()
     {
@@ -63,7 +63,7 @@ public class LogFileManager : MonoBehaviour
             + _dto.LocalDateTime.ToString("dd/MM/yyyy hh:mm:ss.fff tt") + " |" + "\n";
     }
 
-    public void EndApp()
+    public void SaveLogFile()
     {
         GeneralPurposeLogMessage("Saved on device!");
         WriteFile();
