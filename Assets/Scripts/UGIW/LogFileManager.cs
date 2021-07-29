@@ -6,6 +6,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.XR;
+using UnityEngine.XR.Interaction.Toolkit;
 
 [Serializable]
 public class LogFileManager : MonoBehaviour
@@ -60,6 +61,19 @@ public class LogFileManager : MonoBehaviour
     {
         _dto = DateTimeOffset.Now;
         _concatenatedLogString += "| UGIW | Object dropped with " + controller.name + " | "
+            + _dto.LocalDateTime.ToString("dd/MM/yyyy hh:mm:ss.fff tt") + " |" + "\n";
+    }
+
+    public void StartHoveringInteractable(GameObject controller)
+    {
+        _dto = DateTimeOffset.Now;
+        _concatenatedLogString += "| UGIW | Starting to hover over interactable with " + controller.name + " | "
+            + _dto.LocalDateTime.ToString("dd/MM/yyyy hh:mm:ss.fff tt") + " |" + "\n";
+    }
+    public void EndHoveringInteractable(GameObject controller)
+    {
+        _dto = DateTimeOffset.Now;
+        _concatenatedLogString += "| UGIW | Stops to hover over interactable with " + controller.name + " | "
             + _dto.LocalDateTime.ToString("dd/MM/yyyy hh:mm:ss.fff tt") + " |" + "\n";
     }
 
