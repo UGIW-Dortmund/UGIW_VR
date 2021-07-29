@@ -11645,6 +11645,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 705080847, guid: ecdbf3dc6204e7a46943712ecfb94c12, type: 3}
+      propertyPath: m_TeleportState.m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1670256627, guid: ecdbf3dc6204e7a46943712ecfb94c12, type: 3}
       propertyPath: m_HoverExited.m_PersistentCalls.m_Calls.Array.size
       value: 1

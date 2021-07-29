@@ -17,8 +17,6 @@ public class LogFileManager : MonoBehaviour
     private static string _concatenatedLogString;
     private static DateTimeOffset _dto;
 
-    //public Text LogText;
-
     private void Start()
     {
         _rand = new System.Random();
@@ -26,22 +24,10 @@ public class LogFileManager : MonoBehaviour
         DataPath = Application.persistentDataPath;
     }
 
-    //private void Update()
-    //{
-    //    LogText.text = _concatenatedLogString;
-    //}
-
     public void WriteFile()
     {
         DataPath += "/UGIW_Logfile_" + _fileId +".ugiw";
         File.WriteAllText(DataPath, _concatenatedLogString);
-    }
-
-    public void TriggerPressed()
-    {
-        _dto = DateTimeOffset.Now;
-        _concatenatedLogString += "| UGIW | Trigger-Pressed | " 
-            + _dto.LocalDateTime.ToString("dd/MM/yyyy hh:mm:ss.fff tt") + " |" + "\n";
     }
 
     public void GeneralPurposeLogMessage(string message)
