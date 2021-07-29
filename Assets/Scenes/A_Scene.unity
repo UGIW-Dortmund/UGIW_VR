@@ -11645,6 +11645,14 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 502342292, guid: ecdbf3dc6204e7a46943712ecfb94c12, type: 3}
+      propertyPath: LogFileManager
+      value: 
+      objectReference: {fileID: 750763}
+    - target: {fileID: 705080847, guid: ecdbf3dc6204e7a46943712ecfb94c12, type: 3}
+      propertyPath: LogFileManager
+      value: 
+      objectReference: {fileID: 750763}
     - target: {fileID: 705080847, guid: ecdbf3dc6204e7a46943712ecfb94c12, type: 3}
       propertyPath: m_TeleportState.m_Enabled
       value: 0

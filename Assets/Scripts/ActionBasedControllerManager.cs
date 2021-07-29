@@ -16,6 +16,9 @@ public class ActionBasedControllerManager : MonoBehaviour
 {
     public const int kControllerManagerUpdateOrder = 10;
 
+    // Custom Field
+    public LogFileManager LogFileManager;
+
     public enum StateId
     {
         None,
@@ -510,6 +513,7 @@ public class ActionBasedControllerManager : MonoBehaviour
         if (triggerTeleportMode && !cancelTeleport)
         {
             TransitionState(m_SelectState, m_TeleportState);
+            LogFileManager.GeneralPurposeLogMessage("User teleported; old position = " + gameObject.transform.parent.parent.transform.position.ToString());
             return;
         }
 
