@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f2f5cddf7697634d9d3f56e7bb2d7c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LogText: {fileID: 1352273234}
+  LogText: {fileID: 0}
 --- !u!4 &750764
 Transform:
   m_ObjectHideFlags: 0
@@ -5491,18 +5491,6 @@ MonoBehaviour:
     m_Reference: {fileID: 7779212132400271959, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
   m_ButtonPressPoint: 0.5
---- !u!114 &1352273234 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1618231464, guid: a3414a3e7e94e454e8eafbae636b258f,
-    type: 3}
-  m_PrefabInstance: {fileID: 3610125289663019275}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1361534739
 GameObject:
   m_ObjectHideFlags: 0
@@ -11142,12 +11130,48 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 1618231463, guid: a3414a3e7e94e454e8eafbae636b258f, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 1618231463, guid: a3414a3e7e94e454e8eafbae636b258f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1618231463, guid: a3414a3e7e94e454e8eafbae636b258f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1618231463, guid: a3414a3e7e94e454e8eafbae636b258f, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1618231463, guid: a3414a3e7e94e454e8eafbae636b258f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -105
+      objectReference: {fileID: 0}
+    - target: {fileID: 1618231464, guid: a3414a3e7e94e454e8eafbae636b258f, type: 3}
+      propertyPath: m_Text
+      value: "INFORMATIONEN:\n\n- Verwenden Sie die Trigger-Taste, um mit der Benutzeroberfl\xE4che
+        zu interagieren.\r\n\r\n- Verwenden Sie den Thumbstick zum sich durch die
+        Umgebung zu bewegen und sich zu Drehen.\r\n\r\n- Verwenden Sie die Greiftaste,
+        um Objekte zu greifen. \n\nWICHTIG:\n- Sobald Sie mit der Erkundung der Umgebung
+        fertig sind, so klicken Sie auf den Butto \"Save\""
+      objectReference: {fileID: 0}
+    - target: {fileID: 1618231464, guid: a3414a3e7e94e454e8eafbae636b258f, type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1884192571, guid: a3414a3e7e94e454e8eafbae636b258f, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1884192571, guid: a3414a3e7e94e454e8eafbae636b258f, type: 3}
       propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1884192571, guid: a3414a3e7e94e454e8eafbae636b258f, type: 3}
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3610125288142581944, guid: a3414a3e7e94e454e8eafbae636b258f,
