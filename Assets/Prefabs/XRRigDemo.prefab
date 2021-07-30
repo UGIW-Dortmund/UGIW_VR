@@ -1043,6 +1043,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c5c5d0bdefe3d14482446511d7b4a4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LogFileManager: {fileID: 0}
+  TeleportUI: {fileID: 0}
   m_BaseControllerGameObject: {fileID: 1670256624}
   m_TeleportControllerGameObject: {fileID: 1319746308}
   m_TeleportModeActivate: {fileID: -8061240218431744966, guid: c348712bda248c246b8c49b3db54643f,
@@ -1136,6 +1138,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c5c5d0bdefe3d14482446511d7b4a4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LogFileManager: {fileID: 0}
+  TeleportUI: {fileID: 0}
   m_BaseControllerGameObject: {fileID: 202364687}
   m_TeleportControllerGameObject: {fileID: 341080492}
   m_TeleportModeActivate: {fileID: 1263111715868034790, guid: c348712bda248c246b8c49b3db54643f,
