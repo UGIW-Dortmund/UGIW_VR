@@ -12060,8 +12060,8 @@ PrefabInstance:
         um mit der Benutzeroberfl\xE4che zu interagieren.\r\n\r\n- Verwenden Sie
         den Thumbstick zum sich durch die Umgebung zu bewegen und sich zu Drehen.\r\n\r\n-
         Verwenden Sie die Greiftaste, um Objekte zu greifen. \n\nWICHTIG:\n- Sobald
-        Sie mit der Erkundung der Umgebung fertig sind, so klicken Sie auf den Butto
-        \"Save\""
+        Sie mit der Erkundung der Umgebung fertig sind, so klicken Sie auf den Button
+        \"THE END\""
       objectReference: {fileID: 0}
     - target: {fileID: 1618231464, guid: a3414a3e7e94e454e8eafbae636b258f, type: 3}
       propertyPath: m_FontData.m_BestFit
