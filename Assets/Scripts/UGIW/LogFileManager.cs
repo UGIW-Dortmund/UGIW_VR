@@ -63,6 +63,20 @@ public class LogFileManager : MonoBehaviour
             + _dto.LocalDateTime.ToString("dd/MM/yyyy hh:mm:ss.fff tt") + "" + "\n";
     }
 
+    public void IntentTeleport()
+    {
+        _dto = DateTimeOffset.Now;
+        _concatenatedLogString += "| UGIW | Wants to teleport... | "
+            + _dto.LocalDateTime.ToString("dd/MM/yyyy hh:mm:ss.fff tt") + "" + "\n";
+    }
+
+    public void TeleportSuccess(Transform newPos)
+    {
+        _dto = DateTimeOffset.Now;
+        _concatenatedLogString += "| UGIW | Teleported; new Position= " + newPos.position.ToString() 
+            + _dto.LocalDateTime.ToString("dd/MM/yyyy hh:mm:ss.fff tt") + "" + "\n";
+    }
+
     public void SaveLogFile()
     {
         GeneralPurposeLogMessage("Saved on device!");

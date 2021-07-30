@@ -5,6 +5,8 @@ using UnityEngine.Events;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
+using TMPro;
+using UnityEngine.UI;
 
 /// <summary>
 /// Use this class to map input actions to each controller state (mode)
@@ -18,6 +20,7 @@ public class ActionBasedControllerManager : MonoBehaviour
 
     // Custom Field
     public LogFileManager LogFileManager;
+    public TMP_Text TeleportUI;
 
     public enum StateId
     {
@@ -513,7 +516,8 @@ public class ActionBasedControllerManager : MonoBehaviour
         if (triggerTeleportMode && !cancelTeleport)
         {
             TransitionState(m_SelectState, m_TeleportState);
-            LogFileManager.GeneralPurposeLogMessage("User teleported; old position = " + gameObject.transform.parent.parent.transform.position.ToString());
+            TeleportUI.text = "UPDATE_SELECT_STATE - " + gameObject.name;
+            LogFileManager.IntentTeleport();
             return;
         }
 
@@ -537,8 +541,19 @@ public class ActionBasedControllerManager : MonoBehaviour
         var cancelTeleport = cancelTeleportModeAction != null && cancelTeleportModeAction.triggered;
         var releasedTeleport = teleportModeAction != null && teleportModeAction.phase == InputActionPhase.Waiting;
 
-        if (cancelTeleport || releasedTeleport) 
+        if (cancelTeleport || releasedTeleport)
+        {
+            if (cancelTeleport)
+            {
+                TeleportUI.text = "CANCEL_TELEPORT - " + gameObject.name;
+            }
+            else if (releasedTeleport)
+            {
+                TeleportUI.text = "RELEASED_TELEPORT - " + gameObject.name;
+                LogFileManager.TeleportSuccess(gameObject.transform.parent.parent.transform);
+            }
             TransitionState(m_TeleportState, m_SelectState);
+        }
     }
 
     void OnUpdateInteractState()
