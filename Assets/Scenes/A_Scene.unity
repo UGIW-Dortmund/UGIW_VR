@@ -11069,6 +11069,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 163259043, guid: a3414a3e7e94e454e8eafbae636b258f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 232818781, guid: a3414a3e7e94e454e8eafbae636b258f, type: 3}
       propertyPath: m_Pivot.y
       value: 1
@@ -11153,6 +11157,22 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 889611412, guid: a3414a3e7e94e454e8eafbae636b258f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1369597417, guid: a3414a3e7e94e454e8eafbae636b258f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1455569249, guid: a3414a3e7e94e454e8eafbae636b258f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1455569249, guid: a3414a3e7e94e454e8eafbae636b258f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 1455569250, guid: a3414a3e7e94e454e8eafbae636b258f, type: 3}
       propertyPath: m_Text
       value: THE END
@@ -11170,12 +11190,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1455569250, guid: a3414a3e7e94e454e8eafbae636b258f, type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 52
+      objectReference: {fileID: 0}
+    - target: {fileID: 1455569250, guid: a3414a3e7e94e454e8eafbae636b258f, type: 3}
       propertyPath: m_FontData.m_MinSize
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1455569250, guid: a3414a3e7e94e454e8eafbae636b258f, type: 3}
       propertyPath: m_FontData.m_FontSize
-      value: 16
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 1455569250, guid: a3414a3e7e94e454e8eafbae636b258f, type: 3}
       propertyPath: m_FontData.m_FontStyle
@@ -11184,6 +11208,22 @@ PrefabInstance:
     - target: {fileID: 1455569250, guid: a3414a3e7e94e454e8eafbae636b258f, type: 3}
       propertyPath: m_FontData.m_LineSpacing
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1609165197, guid: a3414a3e7e94e454e8eafbae636b258f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1609165197, guid: a3414a3e7e94e454e8eafbae636b258f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1609165197, guid: a3414a3e7e94e454e8eafbae636b258f, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1609165197, guid: a3414a3e7e94e454e8eafbae636b258f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1609165198, guid: a3414a3e7e94e454e8eafbae636b258f, type: 3}
       propertyPath: m_Transition
@@ -11291,11 +11331,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1618231464, guid: a3414a3e7e94e454e8eafbae636b258f, type: 3}
       propertyPath: m_Text
-      value: "INFORMATIONEN:\n\n- Verwenden Sie die Trigger-Taste, um mit der Benutzeroberfl\xE4che
-        zu interagieren.\r\n\r\n- Verwenden Sie den Thumbstick zum sich durch die
-        Umgebung zu bewegen und sich zu Drehen.\r\n\r\n- Verwenden Sie die Greiftaste,
-        um Objekte zu greifen. \n\nWICHTIG:\n- Sobald Sie mit der Erkundung der Umgebung
-        fertig sind, so klicken Sie auf den Butto \"Save\""
+      value: "INFORMATIONEN:\n\n- Verwenden Sie die Trigger-Taste des linken Controllers,
+        um mit der Benutzeroberfl\xE4che zu interagieren.\r\n\r\n- Verwenden Sie
+        den Thumbstick zum sich durch die Umgebung zu bewegen und sich zu Drehen.\r\n\r\n-
+        Verwenden Sie die Greiftaste, um Objekte zu greifen. \n\nWICHTIG:\n- Sobald
+        Sie mit der Erkundung der Umgebung fertig sind, so klicken Sie auf den Butto
+        \"Save\""
       objectReference: {fileID: 0}
     - target: {fileID: 1618231464, guid: a3414a3e7e94e454e8eafbae636b258f, type: 3}
       propertyPath: m_FontData.m_BestFit
