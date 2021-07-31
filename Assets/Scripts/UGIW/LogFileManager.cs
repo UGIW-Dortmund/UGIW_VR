@@ -73,7 +73,7 @@ public class LogFileManager : MonoBehaviour
     public void TeleportSuccess(Transform newPos)
     {
         _dto = DateTimeOffset.Now;
-        _concatenatedLogString += "| UGIW | Teleported; new Position= " + newPos.position.ToString() 
+        _concatenatedLogString += "| UGIW | Teleported; new Position = " + newPos.position.ToString() + " | "
             + _dto.LocalDateTime.ToString("dd/MM/yyyy hh:mm:ss.fff tt") + "" + "\n";
     }
 
